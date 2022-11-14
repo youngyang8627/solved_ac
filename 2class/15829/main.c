@@ -1,14 +1,13 @@
 #include <stdio.h>
-#include <string.h>
 
 int main()
 {
 	int a;
 	scanf("%d",&a);
 	char s[a+1];
-	long long i,j;
-	long long tmp=1;
-	long long sum=0;
+	unsigned long long i,j;
+	unsigned long long tmp=1;
+	unsigned long long sum=0;
 	long mod = 1234567891;
 	scanf("%s",s);
 	for(i=0;i<a;i++){
@@ -20,7 +19,7 @@ int main()
 				}
 				else{
 					tmp*=31;
-					sum=sum+(j*tmp)%mod;
+					sum=(sum+j*tmp)%mod;
 					break;
 				}
 			}

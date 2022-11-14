@@ -2,12 +2,12 @@
 
 int main()
 {
-	int cnt[26];
+	int cnt[26]={0};
 	char a[1000001];
 	int i;
 	int j;
 	scanf("%s",a);
-	for(i=0;i<1000001;i++){
+	for(i=0;i<1000000;i++){
 		if(a[i]=='\0'){
 			break;
 		}
@@ -31,14 +31,11 @@ int main()
 			tot++;
 		}
 	}
-	if(tot==2){
+	if(tot>=2){
 		printf("?");
 	}
 	else if(tot==1){
 		printf("%c",65+ans);
-	}
-	else{
-		printf("error");
 	}
 	return 0;
 }

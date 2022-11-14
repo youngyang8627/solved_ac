@@ -30,14 +30,17 @@ int main()
 	for(i=0;i<1000001;i++){
 		if(a[i]==' '&&a[i+1]=='\0'){
 			cnt++;
-			printf("%d",cnt);
-			return 0;
+			tmp = i+1;
+			break;
 		}
 		if(a[i]=='\0'){
 			tmp = i;
 			break;
 		}
 		else if(a[i]==' ')cnt++;
+	}
+	if(a[0]==' '&&a[tmp-1]==' '){
+		cnt--;
 	}
 	if(a[0]!=' '&&a[tmp-1]!=' '){
 		cnt++;

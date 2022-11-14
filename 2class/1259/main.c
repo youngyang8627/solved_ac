@@ -16,7 +16,7 @@ int main()
 		}
 		while(a[i]<=0){
 			cmp[cnt]=a[i]%10;
-			a[i]/10;
+			a[i]/=10;
 			cnt++;
 		}
 		if(cnt%2==1){
@@ -38,13 +38,17 @@ int main()
 		}
 		i++;
 	}
+	int acc=i;
 	i=0;
-	while(i<=cnt){
+	while(i<acc){
 		if(b[i]==1){
 			printf("yes\n");
 		}
-		else{
+		else if(b[i]==0){
 			printf("no\n");
+		}
+		else{
+			printf("error\n");
 		}
 		i++;
 	}
