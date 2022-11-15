@@ -14,12 +14,13 @@ int main()
 		if(a[i]==0){
 			break;
 		}
-		while(a[i]<=0){
+		while(a[i]>0){
 			cmp[cnt]=a[i]%10;
 			a[i]/=10;
 			cnt++;
 		}
-		if(cnt%2==1){
+		cnt--;
+		if(cnt%2==0){
 			for(j=0;j<=cnt/2;j++){
 				if(cmp[j]==cmp[cnt-j]){
 					tmp++;
@@ -28,7 +29,7 @@ int main()
 		}
 		else{
 			for(j=0;j<=cnt/2-1;j++){
-				if(cmp[j]==cmp[cnt-i]){
+				if(cmp[j]==cmp[cnt-j]){
 					tmp++;
 				}
 			}
@@ -36,6 +37,7 @@ int main()
 		if(tmp>=cnt){
 			b[i]=1;
 		}
+		cnt=0;
 		i++;
 	}
 	int acc=i;
