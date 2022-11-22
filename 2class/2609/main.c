@@ -14,7 +14,7 @@ int main(){
 		max = b;
 		min = a;
 	}
-	while(i<max){
+	while(i<=max){
 		if(a%i==0&&b%i==0){
 			smax=i;
 		}
