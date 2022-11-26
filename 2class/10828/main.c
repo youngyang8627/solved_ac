@@ -6,6 +6,8 @@ int main()
 	scanf("%d",&n);
 	int i=0,j=0;
 	int a[10001]={0};
+	int b[10001]={0};
+	int k=0;
 	char c[10];
 	int div=0;
 	int hash=0;
@@ -29,7 +31,8 @@ int main()
 			case 335 :
 				//this is pop
 				i--;
-				printf("%d",a[i]);
+				b[k]=a[i];
+				k++;
 				cnt++;
 				break;
 			case 443 :
@@ -40,22 +43,32 @@ int main()
 					}
 					ll++;
 				}
+				b[k]=ll;
+				k++;
 				break;
 			case 559 :
 				//this is empty
-				if(a[i]==0){
-					printf("%d",0);
+				if(a[i-1]==0){
+					b[k]=1;
+					k++;
 				}
 				else{
-					printf("%d",1);
+					b[k]=0;
+					k++;
 				}
 				break;
 			case 339 :
 				//this is top
-				printf("%d",a[i-1]);
+				b[k]=a[i-1];
+				k++;
 				break;
 		}
 		cnt++;
+	}
+	int cnt2;
+	cnt2=k;
+	for(k=0;k<cnt2;k++){
+		printf("%d\n",b[k]);
 	}
 	return 0;
 }
