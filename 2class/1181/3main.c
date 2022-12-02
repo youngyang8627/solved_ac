@@ -12,7 +12,7 @@ int main()
 	for(i=0;i<n;i++){
 		scanf("%s",a[i]);
 	}
-	while(
+	int c=0;
 	for(i=0;i<n;i++){
 		for(j=0;j<i;j++){
 			if(i==j);
