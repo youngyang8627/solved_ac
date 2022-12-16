@@ -1,7 +1,6 @@
 #include <stdio.h>
 
 int a[1000001];
-int swt;
 
 void merge(int in,int fi){
     if(fi-in>0){
@@ -15,16 +14,19 @@ void merge(int in,int fi){
         return;
     }
     else{
-        int b[fi];
-        int i=in;
-        int j;
-        int cmp;
-        for(i=in;i<fi;i++){
-            
-        }
-        for(i=in;i<fi;i++){
-            a[i]=b[i];
-        }
+     	int hf=fi/2;
+	int in2=in;
+	int fi2=fi;
+	int b[fi];
+	if(fi==1)hf=1;
+	int hf2=hf;
+	int i=0;
+	int hold;
+	if(fi-in>1){
+		while(1){
+			if(in==hf&&
+		}
+
     }
 }
 

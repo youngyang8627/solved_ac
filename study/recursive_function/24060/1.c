@@ -1,7 +1,8 @@
 #include <stdio.h>
 
-int main() {
-	    int s[] = { 1819043144, 1867980911, 560229490, 0 };
-	        puts(s);
-		return 0;
+int main()
+{
+	int a=5;
+	printf("a = 5\nprint a/2 = %d\n",a/2);
+	return 0;
 }
