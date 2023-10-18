@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 
+
+
 int main()
 {
 	int n;
@@ -15,16 +17,16 @@ int main()
 	for(i=0;i<n;i++){
 		cmp=i;
 		for(j=i+1;j<n;j++){
-			if(strcmp(a[cmp],a[j])==0){
-				strcpy(a[j],"zzzznothing");
+			if(ft_strcmp(a[cmp],a[j])==0){
+				ft_strcpy(a[j],"zzzznothing");
 			}
-			if(strlen(a[cmp])>strlen(a[j])){
+			if(ft_strlen(a[cmp])>strlen(a[j])){
 				cmp=j;
 			}
 		}
-		strcpy(swt,a[cmp]);
-		strcpy(a[cmp],a[i]);
-		strcpy(a[i],swt);
+		ft_strcpy(swt,a[cmp]);
+		ft_strcpy(a[cmp],a[i]);
+		ft_strcpy(a[i],swt);
 	}
 	int k;
 	for(i=0;i<n;i++){
